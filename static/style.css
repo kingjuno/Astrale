@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0; 
+
+}
+
+.bg {
+  background-image: url("mars_bg.jpg");
+  max-width: 100%;
+  min-height: 100%;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* opacity: 50; */
+  background-color: #000;  
+  z-index:10;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.intro{
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: -webkit-linear-gradient(rgb(243, 240, 241), rgb(179, 177, 177));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Roboto Mono', monospace;
+  display: inline-block;
+}
+
+.intro-text {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+  animation: typing 2s steps(30, end), blink .75s step-end 3;
+  white-space: nowrap;
+  font-size: 100px;
+  font-weight: 700;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+}
+
+@keyframes typing {
+  from { 
+      width: 0% ;
+      color: rgb(81, 29, 204);
+  }
+  to { 
+      width: 100% ;
+      color: rgb(75, 161, 187);
+  }
+}
+
+@keyframes blink {
+  from { 
+      border-color: orange; 
+  }
+  50% { 
+      border-color: transparent; 
+      size:0px;
+  }
+}
+
+.container {
+  position: absolute;
+  left: 48%;
+  top: 60%;
+  width: 24px;
+  height: 24px;
+}
+
+.chevron {
+  color: rgb(14, 9, 9);
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+    color: black;
+
+  }
+  33% {
+    opacity: 1;
+    color: blue;
+    transform: translateY(30px);
+  }
+  67% {
+    color: #6b0999;
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    color: #5a4f4f;
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 0.8;
+  }
+}
+
+
+
+.main_body{
+  background-image: url('black.jpg');
+  max-width: 100%;
+  min-height: 100%;
+  opacity: 0.9999;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.socials {
+  list-style: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+
+  animation: test 1s ease forwards 3.5s;
+}
+
+.social a button img:hover {
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 799px) {
+  .socials {
+      grid-auto-flow: row dense;
+      grid-template-rows: 1fr 1fr;
+
+      display: flex;
+      justify-content: space-around;
+
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .socials {
+      grid-auto-flow: column dense;
+      grid-template-columns: 1fr 1fr;
+
+      display: grid;
+  }
+  .social {
+      grid-column-start: 1;
+  }
+}
+
+
+.social a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Make button styles for each social. */
+button {
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+button img {
+  width: 64px;
+}
+
+.menu{
+  position:absolute;
+  top: 160%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen  {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 30px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 0px;
+  border-radius: 50px;
+  /* min-height: 150px;
+  min-width: 150px; */
+  min-height: 200px;
+  max-width: 200px;
+  text-align: center;
+  /* background-color:transparent; */
+  border: 1px solid rgb(92, 91, 89.0.4);
+}
+
+.card h3{
+  position: relative;
+  color: #fff;
+}
+
+.card p{
+  font-weight: bold;
+  color: plum;
+}
+
+

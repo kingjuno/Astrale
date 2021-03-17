@@ -1,0 +1,14 @@
+<!-- {%for i,j in content.items()%}
+    <li>{{i}}----{{j}}</li>
+{%endfor%}
+kj
+{{content['sol_keys'][-1]}}
+
+{%for i in content['sol_keys']%}
+    <li>"{{content[i|string()]['First_UTC'][5:10]}}",</li>
+{%endfor%}
+
+{%for i in content['sol_keys']%}
+    <li>"{{(content[i|string()]['PRE']['mx']-273.15)*1.8+32}}",</li>
+{%endfor%} -->
+{{content}}

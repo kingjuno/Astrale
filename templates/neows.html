@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Geo Jolly</title>
+    <style>
+        body{
+            padding:3px;
+            height: 100%;
+            margin: 0; 
+            color: #fff;
+            background-color: #000;
+        }
+        table, th, td {
+            border: 1px solid rgb(117, 110, 212);
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            right: -10px;
+        }
+        </style>
+</head>
+
+<body>
+
+{%for i in content['near_earth_objects']%}
+    <br>
+    <h1>{{i['name']}}</h1><br>
+    <h2><b>ID : </b>{{i['id']}}</h2><br>
+    <h3><b>Absolute Magnitude : </b>{{i['absolute_magnitude_h']}}</h3>
+    <h3>Status &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: {{'Safe' if i['is_potentially_hazardous_asteroid']!=True else 'Dangerous'}}</h3>
+    <h3>Sentry Object &emsp;&emsp;&ensp;&nbsp;: {{'Yes' if i['is_sentry_object']!=True else 'No'}}</h3>
+    <br>
+    <!-- <h3>Orbital Data  :</h3>
+    <table style="width:100%">
+        <tr>
+            <td>{{k}}</td>
+            <td>{{j}}</td>
+        </tr>    
+    </table>
+    <br> -->
+    <h3>Estimated Diameter  :</h3>
+    <table style="width:100%">
+        <tr>
+            <th>Unit</th>
+            <th>Estimated Diameter (Min)</th>
+            <th>Estimated Diameter (Max)</th>
+        </tr>
+        {%for k,j in content['near_earth_objects'][0]['estimated_diameter'].items()%}
+            <tr>
+                <td>{{k}}</td>
+                <td>{{j['estimated_diameter_min']}}</td>
+                <td>{{j['estimated_diameter_max']}}</td>
+            </tr>    
+        {%endfor%}
+    </table>
+    <br>
+    <h3>Close Approach Data:</h3>
+    <table style="width:100%">
+        <tr>
+            <th>ID</th>
+            <th>Close Approach Date</th>
+            <th>Relative Velocity</th>
+            <th>Miss Distance</th>
+            <th>Orbiting Body</th>
+        </tr>
+    {%for j in content['near_earth_objects'][0]['close_approach_data']%}
+        {%if 2050>(j['close_approach_date_full'][:4]|int)>2020%}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{j['close_approach_date_full']}}</td>
+            <td>
+                <table style="width:100%">
+                    <tr>
+                        <th>km/s</th>
+                        <th>km/hr</th>
+                        <th>miles/hr</th>
+                    </tr>
+                    <tr>
+                        <td>{{j['relative_velocity']['kilometers_per_second'][:4]}}</td>
+                        <td>{{j['relative_velocity']['kilometers_per_hour'][:8]}}</td>
+                        <td>{{j['relative_velocity']['miles_per_hour'][:8]}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table style="width:100%">
+                    <tr>
+                        <th>astronomical</th>
+                        <th>lunar</th>
+                        <th>miles</th>
+                        <th>kilometers</th>
+                    </tr>
+                    <tr>
+                        <td>{{j['miss_distance']['astronomical'][:11]}}</td>
+                        <td>{{j['miss_distance']['lunar'][:8]}}</td>
+                        <td>{{j['miss_distance']['miles'][:12]}}</td>
+                        <td>{{j['miss_distance']['kilometers'][:12]}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>{{j['orbiting_body']}}</td>
+        </tr>  
+        {%endif%}  
+    {%endfor%}
+    </table>
+    <br><br><br>
+    <hr>
+{% endfor %}
+
+
+
+<!-- {%for i,j in content['near_earth_objects'][0].items()%}
+    <li>{{i}}----{{j}}</li>
+{%endfor%} -->
+</body>
+</html>

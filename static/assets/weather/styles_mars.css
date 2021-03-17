@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+h1{
+    font-family: 'Share Tech', sans-serif;
+    font-size:70px;
+    text-align: center;
+    color: rgb(101, 122, 212);
+}
+body{
+    background-image: url('back_space.jpg');
+}
+.weather-panel{
+    height:530px;
+    width:1000px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-size: 100% 100%;
+    background-image: url('mars_w.jpg');
+    color : rgb(36, 5, 5);
+}
+
+.weather-panel h2{
+    font-size : 40px;
+    position : relative;
+    top:0%;
+    left: 10%;
+    color : rgb(255, 255, 255);
+    font-family: 'Share Tech', sans-serif;
+}
+
+.weather-panel p{
+    font-size : 20px;
+    position : relative;
+    top:0%;
+    left: 10%;
+    color : rgb(255, 255, 255);
+    font-family: 'Share Tech';
+}
+
+.sol_today{
+    height: 100px;
+    width: 140px;
+    position : relative;
+    top: -25%;
+    left: 70%;
+    font-size:  40px;
+    font-weight: 1px;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Share Tech';
+    color: white;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.week1{
+    height: 130px;
+    width: 110px;
+    position : relative;
+    top: 5%;
+    left: 2%;
+    font-size:  20px;
+    font-weight: 1px;
+    text-align: center;
+    font-family: 'Share Tech';
+    color: rgb(26, 25, 25);
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
+    margin: 10px;
+}
+
+.week1 h1{
+    font-size:30px;;
+    margin:0;
+    color: #000;
+}
+
+.week1 h3{
+    font-size: 15px;
+    margin-bottom:17px;
+    margin-left: 5px;
+    text-align:left;
+    line-height:10px;
+    padding: 0px;
+    font-weight:100px;
+}
+
+
+.week2{
+    height: 130px;
+    width: 110px;
+    position : relative;
+    top: -21.3%;
+    left: 16%;
+    font-size:  20px;
+    font-weight: 1px;
+    text-align: center;
+    font-family: 'Share Tech';
+    color: rgb(26, 25, 25);
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
+    margin: 10px;
+}
+
+.week2 h1{
+    font-size:30px;;
+    margin:0;color: #000;
+}
+
+.week2 h3{
+    font-size: 15px;
+    margin-bottom:17px;
+    margin-left: 5px;
+    text-align:left;
+    line-height:10px;
+    padding: 0px;
+    font-weight:100px;
+}
+
+.week3{
+    height: 130px;
+    width: 110px;
+    position : relative;
+    top: -47.5%;
+    left: 30%;
+    font-size:  20px;
+    font-weight: 1px;
+    text-align: center;
+    font-family: 'Share Tech';
+    color: rgb(26, 25, 25);
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
+    margin: 10px;
+}
+.week3 h1{
+    font-size:30px;;
+    margin:0;color: #000;
+}
+.week3 h3{
+    font-size: 15px;
+    margin-bottom:17px;
+    margin-left: 5px;
+    text-align:left;
+    line-height:10px;
+    padding: 0px;
+    font-weight:100px;
+}
+.week4{
+    height: 130px;
+    width: 110px;
+    position : relative;
+    top: -74%;
+    left: 44%;
+    font-size:  20px;
+    font-weight: 1px;
+    text-align: center;
+    font-family: 'Share Tech';
+    color: rgb(26, 25, 25);
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
+    margin: 10px;
+}
+.week4 h1{
+    font-size:30px;;
+    margin:0;color: #000;
+}
+.week4 h3{
+    font-size: 15px;
+    margin-bottom:17px;
+    margin-left: 5px;
+    text-align:left;
+    line-height:10px;
+    padding: 0px;
+    font-weight:100px;
+}
+
+.week5{
+    height: 130px;
+    width: 110px;
+    position : relative;
+    top: -100.1%;
+    left: 58%;
+    font-size:  20px;
+    font-weight: 1px;
+    text-align: center;
+    font-family: 'Share Tech';
+    color: rgb(26, 25, 25);
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
+    margin: 10px;
+}
+.week5 h1{
+    font-size:30px;;
+    margin:0;color: #000;
+}
+.week5 h3{
+    font-size: 15px;
+    margin-bottom:17px;
+    margin-left: 5px;
+    text-align:left;
+    line-height:10px;
+    padding: 0px;
+    font-weight:100px;
+}
+
+.week6{
+    height: 130px;
+    width: 110px;
+    position : relative;
+    top: -126.4%;
+    left: 72%;
+    font-size:  20px;
+    font-weight: 1px;
+    text-align: center;
+    font-family: 'Share Tech';
+    color: rgb(26, 25, 25);
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
+    margin: 10px;
+}
+.week6 h1{
+    font-size:30px;;
+    margin:0;color: #000;
+}
+.week6 h3{
+    font-size: 15px;
+    margin-bottom:17px;
+    margin-left: 5px;
+    text-align:left;
+    line-height:10px;
+    padding: 0px;
+    font-weight:100px;
+}
+
+.week7{
+    height: 130px;
+    width: 110px;
+    position : relative;
+    top: -152.7%;
+    left: 86%;
+    font-size:  20px;
+    font-weight: 1px;
+    text-align: center;
+    font-family: 'Share Tech';
+    color: rgb(26, 25, 25);
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
+    margin: 10px;
+}
+.week7 h1{
+    font-size:30px;;
+    margin:0;color: #000;
+}
+.week7 h3{
+    font-size: 15px;
+    margin-bottom:17px;
+    margin-left: 5px;
+    text-align:left;
+    line-height:10px;
+    padding: 0px;
+    font-weight:100px;
+}

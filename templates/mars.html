@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geo Jolly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/weather/styles_mars.css') }}">
+    <style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(51, 51, 51,0.4);
+  border-radius:442px;;
+  }
+
+  li {
+  float: right;
+  }
+
+  li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 26px;
+  text-decoration: none;
+  }
+
+  li a:hover {
+  background-color: #111;
+  }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/neows">Neows</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    <h1>Mars Weather</h1>
+    <div class="weather-panel">
+        <h2>Latest Weather at <br>&ensp;&ensp; Mars</h2>
+        <p>Get the latest Mars weather from the Curiosity Rover.</p>
+        <div class='sol_today'>
+            <b>Sol {{content['sol_keys'][-1]}}</b><br>
+            {{dates[-1]}}
+        </div>
+        
+        <div class='week1'>
+            <h1>Sol {{content['sol_keys'][0]}}</h1>
+            {{dates[0]}}
+            <br>
+            <h3>High : {{(((content[content['sol_keys'][0]|string()]['PRE']['mx']-273.15)*1.8+32)|string())[:5]}} pa</h3> 
+             <h3>Low&nbsp; : {{(((content[content['sol_keys'][0]|string()]['PRE']['mn']-273.15)*1.8+32)|string())[:5]}} pa</h3>
+        </div>
+        <div class='week2'>
+            <h1>Sol {{content['sol_keys'][1]}}</h1>
+            {{dates[1]}}
+            <br>
+            <h3>High : {{(((content[content['sol_keys'][1]|string()]['PRE']['mx']-273.15)*1.8+32)|string())[:5]}} pa</h3> 
+             <h3>Low&nbsp; : {{(((content[content['sol_keys'][1]|string()]['PRE']['mn']-273.15)*1.8+32)|string())[:5]}} pa</h3>
+        </div>
+        <div class='week3'>
+            <h1>Sol {{content['sol_keys'][2]}}</h1>
+            {{dates[2]}}
+            <br>
+            <h3>High : {{(((content[content['sol_keys'][2]|string()]['PRE']['mx']-273.15)*1.8+32)|string())[:5]}} pa</h3> 
+             <h3>Low&nbsp; : {{(((content[content['sol_keys'][2]|string()]['PRE']['mn']-273.15)*1.8+32)|string())[:5]}} pa</h3>
+        </div>
+        <div class='week4'>
+            <h1>Sol {{content['sol_keys'][3]}}</h1>
+            {{dates[3]}}
+            <br>
+            <h3>High : {{(((content[content['sol_keys'][3]|string()]['PRE']['mx']-273.15)*1.8+32)|string())[:5]}} pa</h3> 
+             <h3>Low&nbsp; : {{(((content[content['sol_keys'][3]|string()]['PRE']['mn']-273.15)*1.8+32)|string())[:5]}} pa</h3>
+        </div>
+        <div class='week5'>
+            <h1>Sol {{content['sol_keys'][4]}}</h1>
+            {{dates[4]}}
+            <br>
+            <h3>High : {{(((content[content['sol_keys'][4]|string()]['PRE']['mx']-273.15)*1.8+32)|string())[:5]}} pa</h3> 
+             <h3>Low&nbsp; : {{(((content[content['sol_keys'][4]|string()]['PRE']['mn']-273.15)*1.8+32)|string())[:5]}} pa</h3>
+        </div>
+        <div class='week6'>
+            <h1>Sol {{content['sol_keys'][5]}}</h1>
+            {{dates[5]}}
+            <br>
+            <h3>High : {{(((content[content['sol_keys'][5]|string()]['PRE']['mx']-273.15)*1.8+32)|string())[:5]}} pa</h3> 
+             <h3>Low&nbsp; : {{(((content[content['sol_keys'][5]|string()]['PRE']['mn']-273.15)*1.8+32)|string())[:5]}} pa</h3>
+        </div>
+        <div class='week7'>
+            <h1>Sol {{content['sol_keys'][6]}}</h1>
+            {{dates[6]}}
+            <br>
+            <h3>High : {{(((content[content['sol_keys'][6]|string()]['PRE']['mx']-273.15)*1.8+32)|string())[:5]}} pa</h3> 
+             <h3>Low&nbsp; : {{(((content[content['sol_keys'][6]|string()]['PRE']['mn']-273.15)*1.8+32)|string())[:5]}} pa</h3>
+        </div>
+    </div>
+    
+</body>
+</html>

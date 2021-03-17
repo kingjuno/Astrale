@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geo Jolly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="bg" id="front">
+        
+        <div class="intro_vertical">Juno</div>
+        <div class="intro">
+            <div class="intro-text">ASTRALE
+            </div>
+        </div>
+        <div onclick="location.href='#neows';" class="container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
+        <ul class="socials">
+            <li class="social"><a href="https://discord.com/users/722132015230484590">
+                <button class="discord">
+                    <img src="/static/Discord_Logo_Color.svg" alt="">
+                </button>
+            </a></li>
+            <li class="social"><a href="https://twitter.com/king__juno">
+                <button class="twitter">
+                    <img src="/static/Twitter_Logo_Blue.svg" alt="">
+                </button>
+            </a></li>
+            <li class="social"><a href="https://github.com/kingjuno">
+                <button class="github">
+                    <img src="/static/GitHub_Logo.png" alt="">
+                </button>
+            </a></li>
+        </ul>
+    </div>
+    
+    <div class="main_body" id="neows">
+        
+        <div class="menu">
+            <div class="row">
+                <div class="column">
+                  <div class="card" onclick="location.href='/neows';">
+                    <br><h3>Neows</h3><br>
+                    <p>Nearby Earth Objects</p>
+                  </div>
+                </div>
+              
+                <div class="column">
+                  <div class="card" onclick="location.href='/mars';">
+                    <br><h3>Mars Insight</h3><br>
+                    <p>Mars Climate</p>
+                  </div>
+                </div>
+                <!-- <div class="column">
+                  <div class="card" onclick="location.href='/about';">
+                    <br><h3>Dev</h3><br>
+                    <p>About the Developer</p>
+                  </div>
+                </div> -->
+                
+              </div>
+          </div>
+    </div>
+    
+    
+
+    <script>
+        window.onscroll = function() {
+            fade();
+        };
+        
+        
+        function fade() {
+        var scrollTop = $(this).scrollTop();
+
+        $('.bg').css({
+            opacity: function() {
+            var elementHeight = $(this).height();
+            return  (100+ elementHeight - scrollTop) / elementHeight;
+            }
+        });
+        }
+    </script>
+
+    
+</body>
+</html>
